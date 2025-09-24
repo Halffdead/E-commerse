@@ -1,0 +1,357 @@
+/* --- Global Styles & Variables (ULTRA-PRO DESIGN) --- */
+:root {
+    --dark-bg: #1a1a1a;
+    --light-bg: #ffffff;
+    --accent-orange: #f08c28;
+    --primary-blue: #0066cc;
+    --headings-dark: #1a1a1a;
+    --text-dark: #333333;
+    --headings-light: #ffffff;
+    --text-light: #cccccc;
+    --border-light: #e0e0e0;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --container-width: 1200px;
+    --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--headings-dark);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 1.5rem; }
+
+section {
+    padding: 100px 0;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+
+/* --- Buttons --- */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--headings-light);
+}
+.btn-primary:hover {
+    background-color: #004c99;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--border-light);
+    color: var(--text-dark);
+}
+.btn-secondary:hover {
+    background-color: var(--headings-dark);
+    border-color: var(--headings-dark);
+    color: var(--headings-light);
+}
+
+
+/* --- Header & Navigation --- */
+.hero {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+#navbar.scrolled {
+    background-color: var(--headings-light);
+    padding: 15px 0;
+    box-shadow: var(--shadow-medium);
+}
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--headings-light);
+    transition: color 0.3s ease;
+}
+#navbar.scrolled .logo {
+    color: var(--headings-dark);
+}
+.nav-links a {
+    color: var(--headings-light);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+#navbar.scrolled .nav-links a {
+    color: var(--text-dark);
+}
+.nav-links a:hover {
+    color: var(--accent-orange);
+}
+.btn-nav {
+    border: 2px solid var(--accent-orange);
+    color: var(--accent-orange);
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+.btn-nav:hover {
+    background-color: var(--accent-orange);
+    color: var(--headings-light);
+}
+#navbar.scrolled .btn-nav {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+#navbar.scrolled .btn-nav:hover {
+    background-color: var(--primary-blue);
+    color: var(--headings-light);
+}
+
+
+/* --- Hero Content --- */
+.hero-content {
+    padding-top: 80px;
+}
+.hero-brand {
+    display: block;
+    color: var(--accent-orange);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+.hero-content h1 {
+    color: var(--headings-light);
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+}
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+}
+.hero-image {
+    display: block;
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto 0;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 2px solid #444;
+}
+
+
+/* --- Intro Section --- */
+#intro {
+    display: flex;
+    gap: 5rem;
+}
+#intro .intro-column {
+    flex: 1;
+}
+#intro h2 {
+    font-size: 2.8rem;
+}
+
+
+/* --- Services Section --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.service-card {
+    background: var(--light-bg);
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--primary-blue);
+}
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+
+/* --- Pricing Section --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+.pricing-card {
+    background: var(--light-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.pricing-card.popular {
+    transform: scale(1.05);
+    border: 2px solid var(--primary-blue);
+}
+.pricing-card:hover:not(.popular) {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+.popular-badge {
+    position: absolute; top: -18px; left: 50%; transform: translateX(-50%);
+    background: var(--primary-blue); color: var(--headings-light);
+    padding: 6px 18px; border-radius: 20px; font-size: 0.9rem; font-weight: 600;
+}
+.price {
+    font-size: 3.5rem; font-weight: 700; margin: 1rem 0; color: var(--headings-dark);
+}
+.price span {
+    font-size: 1rem; font-weight: 500; color: #6c757d;
+}
+.pricing-card ul {
+    list-style: none; margin: 2rem 0; text-align: left;
+}
+.pricing-card ul li {
+    margin-bottom: 1rem;
+}
+.pricing-card ul li i {
+    color: #28a745; margin-right: 12px;
+}
+
+
+/* --- Contact Section --- */
+#contact .subtitle {
+    max-width: 600px; margin: -2rem auto 3rem; text-align: center;
+}
+.contact-form {
+    max-width: 700px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+}
+.form-group {
+    position: relative;
+}
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+.form-group label {
+    font-weight: 500; margin-bottom: 0.5rem; display: block;
+}
+.form-group input, .form-group textarea {
+    width: 100%; padding: 14px; border-radius: 8px;
+    border: 1px solid var(--border-light); font-family: inherit; font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+}
+button.full-width {
+    grid-column: 1 / -1; font-size: 1.1rem;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 40px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-links a {
+    display: inline-block; height: 40px; width: 40px; background-color: rgba(255, 255, 255, 0.1);
+    color: var(--headings-light); border-radius: 50%; line-height: 40px; font-size: 1rem;
+    margin-left: 10px; text-align: center; transition: background-color 0.3s ease;
+}
+.social-links a:hover {
+    background-color: var(--primary-blue);
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-card { max-width: 450px; margin: 0 auto; }
+    .pricing-card.popular { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    nav .nav-links a:not(.btn-nav) { display: none; }
+    #intro { flex-direction: column; gap: 3rem; }
+    .contact-form { grid-template-columns: 1fr; }
+    .footer-content { flex-direction: column; gap: 1rem; }
+}
